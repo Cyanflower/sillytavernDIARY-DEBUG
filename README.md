@@ -564,7 +564,7 @@ import { executeSlashCommandsWithOptions } from "slash-commands.js";
 ### 完整许可证文本
 
 详见项目根目录的 `LICENSE` 文件或访问：  
-https://creativecommons.org/licenses/by-nc-nd/4.0/
+<https://creativecommons.org/licenses/by-nc-nd/4.0/>
 
 ### 重要提示
 
@@ -590,11 +590,13 @@ https://creativecommons.org/licenses/by-nc-nd/4.0/
 ### 关于代码盗用
 
 如果您发现任何人在未经许可的情况下：
+
 - 删除或修改了原作者署名
 - 声称本插件为其原创作品
 - 在分发时未包含许可证文件
 
 请通过以下方式举报：
+
 1. 在 GitHub 仓库提交 Issue
 2. 联系原作者 Etaf Cisky
 3. 提供盗用者的链接和证据
@@ -605,13 +607,13 @@ https://creativecommons.org/licenses/by-nc-nd/4.0/
 
 1. **检查文件头部**：所有主要代码文件（如 `index.js`）都包含详细的版权声明
 2. **检查 manifest.json**：`author` 字段应为 `"Etaf Cisky"`
-3. **检查 LICENSE 文件**：应包含完整的 MIT 许可证文本和版权声明
+3. **检查 LICENSE 文件**：应包含完整的 CC BY-NC-ND 4.0 许可协议文本和版权声明
 4. **检查 GitHub 历史**：官方仓库有完整的提交历史记录
 5. **检查设置页面**：插件设置的"使用帮助"标签页底部包含完整的作者信息
 
 ### 官方发布渠道
 
-- **唯一官方仓库**: [https://github.com/EtafCisky/SillyTavern-Diary](https://github.com/EtafCisky/SillyTavern-Diary)
+- **唯一官方仓库**: [https://github.com/EtafCisky/sillytavernDIARY](https://github.com/EtafCisky/sillytavernDIARY])
 - **作者**: Etaf Cisky
 - **插件指纹**: `EC-STD-2025` (用于版本验证)
 
@@ -621,7 +623,7 @@ https://creativecommons.org/licenses/by-nc-nd/4.0/
 
 **🔗 相关链接**:
 
-- [插件 GitHub 仓库](https://github.com/EtafCisky/SillyTavern-Diary)
+- [插件 GitHub 仓库](https://github.com/EtafCisky/sillytavernDIARY)
 - [SillyTavern 官方文档](https://docs.sillytavern.app/)
 
 ---
