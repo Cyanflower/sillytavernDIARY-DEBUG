@@ -193,13 +193,13 @@ function updateLastTriggerFloor(characterName, floor) {
   const context = getContext();
   const { chatMetadata, saveMetadata } = context;
   
-  // 在当前聊天的元数据中存储触发楼层和触发时间
+  // 在当前聊天的元数据中存储触发楼层
   if (!chatMetadata.sillytavernDIARY) {
     chatMetadata.sillytavernDIARY = {};
   }
   chatMetadata.sillytavernDIARY.lastTriggerFloor = floor;
   chatMetadata.sillytavernDIARY.characterName = characterName;
-  chatMetadata.sillytavernDIARY.lastTriggerTime = Date.now(); // 记录触发时间戳，用于冷却检查
+  // 注意：触发时间戳已在checkAndTriggerAutoDiary中设置，这里不再更新
   saveMetadata();
   
   console.log(`[自动写日记] 已更新"${characterName}"的触发楼层: ${floor}`);
@@ -279,8 +279,17 @@ async function checkAndTriggerAutoDiary() {
   // 判断是否达到触发条件
   if (currentFloor - lastTriggerFloor >= interval) {
     console.log('[自动写日记] 已达到触发条件，开始自动写日记');
+    
+    // 立即记录触发时间戳，开始冷却（在执行写日记之前）
+    const { saveMetadata } = context;
+    if (!chatMetadata.sillytavernDIARY) {
+      chatMetadata.sillytavernDIARY = {};
+    }
+    chatMetadata.sillytavernDIARY.lastTriggerTime = Date.now();
+    saveMetadata();
+    console.log('[自动写日记] 已设置冷却时间，10分钟内不会再次触发');
+    
     toastr.info(`自动写日记触发（${characterName}）`, '日记本');
-
     await triggerAutoDiary(characterName, currentFloor);
   }
 
