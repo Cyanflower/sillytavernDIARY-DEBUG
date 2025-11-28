@@ -59,7 +59,7 @@ import {
 } from '../../../world-info.js';
 
 // 插件基本配置
-const extensionName = 'sillytavernDIARY';
+const extensionName = 'sillytavernDIARY-DEBUG';
 const extensionFolderPath = `scripts/extensions/third-party/${extensionName}`;
 
 const PLUGIN_AUTHOR = {
